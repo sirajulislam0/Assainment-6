@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Card = ({ product }) => {
+const Card = ({ product ,selectedCarts,setSelectedCarts}) => {
     const { name, description, price, period, tag, tagType, features, icon } = product;
 
+    const [selected ,setSelected] = useState(false);
+
+    const selectsCarts =()=>{
+
+        console.log("button CLicked-",product);
+        setSelected(true)
+        setSelectedCarts([...selectedCarts,product])
+        
+    }
     return (
         <div className="border rounded-xl p-6 shadow-md  bg-white">
 
@@ -39,8 +48,10 @@ const Card = ({ product }) => {
             </ul>
 
             {/* button */}
-            <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg">
-               Buy Now
+            <button
+            onClick={()=>selectsCarts()}
+            className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg">
+               {selected ? "Selected" : "Buy Now"}
             </button>
         </div>
     );

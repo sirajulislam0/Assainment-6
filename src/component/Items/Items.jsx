@@ -9,7 +9,7 @@ const Items = ({ productsPromised }) => {
     const products = use(productsPromised);
 
     const [selected, setSelected] = useState("selected");
-    const [selectedCart, setSelectedCart] = useState([]);
+    const [selectedCarts, setSelectedCarts] = useState([]);
 
 
 
@@ -23,17 +23,17 @@ const Items = ({ productsPromised }) => {
             </div>
             <div className='space-x-4 items-center text-center'>
                 <button onClick={() => setSelected('selected')} className='btn btn-primary'>Products</button>
-                <button onClick={() => setSelected('notselected')} className='btn'>Cart (2)</button>
+                <button onClick={() => setSelected('notselected')} className='btn'>Cart( {selectedCarts.length})</button>
             </div>
 
 
 
-        
+
 
             {
-                selected === "selected" ?<Products products={products}></Products>: 
-                <Cart selectedCart = {selectedCart} setSelectedCart  = {setSelectedCart}></Cart> 
-                
+                selected === "selected" ? <Products products={products} selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts}></Products> 
+                :<Cart selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts}></Cart> 
+
             }
 
         </div>

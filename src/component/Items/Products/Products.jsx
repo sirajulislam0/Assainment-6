@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../../Card/Card';
 
-const Products = ({ products }) => {
+const Products = ({ products,selectedCarts,setSelectedCarts }) => {
+
 
 
 
@@ -10,7 +11,7 @@ const Products = ({ products }) => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
 
-                    products.map(product => (<Card key={product.id} product={product} />))
+                    products.map(product => (<Card key={product.id} product={product} selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} />))
                 }
             </div>
 
