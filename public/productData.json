@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder",
+    "description": "Create professional resumes easily.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "https://img.icons8.com/fluency/48/resume.png"
+  },
+  {
+    "id": 2,
+    "name": "AI Logo Maker",
+    "description": "Generate unique logos with AI.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["AI generated logos", "High resolution download", "Editable colors"],
+    "icon": "https://img.icons8.com/fluency/48/artificial-intelligence.png"
+  },
+  {
+    "id": 3,
+    "name": "Social Media Kit",
+    "description": "Create social media graphics quickly.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["500+ templates", "Instagram & Facebook sizes", "Easy editing"],
+    "icon": "https://img.icons8.com/fluency/48/share.png"
+  },
+  {
+    "id": 4,
+    "name": "Portfolio Builder",
+    "description": "Build your personal portfolio website.",
+    "price": 20,
+    "period": "yearly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": ["Custom domain", "Responsive design", "SEO optimization"],
+    "icon": "https://img.icons8.com/fluency/48/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Invoice Generator",
+    "description": "Create invoices for clients easily.",
+    "price": 5,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": ["Custom branding", "Download PDF", "Tax calculation"],
+    "icon": "https://img.icons8.com/fluency/48/bill.png"
+  },
+  {
+    "id": 6,
+    "name": "AI Content Writer",
+    "description": "Generate blog and marketing content.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": ["AI writing assistant", "SEO optimized content", "Multiple languages"],
+    "icon": "https://img.icons8.com/fluency/48/content.png"
+  }
+]
