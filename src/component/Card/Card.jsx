@@ -1,28 +1,35 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const Card = ({ product ,selectedCarts,setSelectedCarts}) => {
+const Card = ({ product, selectedCarts, setSelectedCarts }) => {
     const { name, description, price, period, tag, tagType, features, icon } = product;
 
-    const [selected ,setSelected] = useState(false);
+    const [selected, setSelected] = useState(false);
 
-    const selectsCarts =()=>{
+    const selectsCarts = () => {
 
-        console.log("button CLicked-",product);
+
+        toast(`${product.name} is selected`)
         setSelected(true)
-        setSelectedCarts([...selectedCarts,product])
-        
+        setSelectedCarts([...selectedCarts, product])
+
+
     }
     return (
-        <div className="border rounded-xl p-6 shadow-md  bg-white">
+        <div className="  border rounded p-6 shadow-md  bg-white">
+
 
 
             <div className='flex justify-between'>
-                <img src={icon} alt={name} className=" " />
-                <h2 className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">
-                    {tag}
-                </h2>
 
-                
+                <div className="bg-white rounded-full p-2 shadow">
+                    <img src={product.icon} alt="" />
+                </div>
+                <p className='bg-green-200  rounded-full px-4 h-7'>{tag}</p>
+
+
+
+
             </div>
 
 
@@ -39,20 +46,22 @@ const Card = ({ product ,selectedCarts,setSelectedCarts}) => {
             </h3>
 
 
-            <ul className="mt-3 space-y-1">
+            <ul className="mt-3 space-y-1 grid grid-cols-1 lg:grid">
                 {features.map((feature, index) => (
-                    <li key={index} className="text-sm text-gray-600">
+                    <li key={index} className="text-sm text-[#939aa0]">
                         ✓ {feature}
                     </li>
                 ))}
             </ul>
 
-            {/* button */}
             <button
-            onClick={()=>selectsCarts()}
-            className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg">
-               {selected ? "Selected" : "Buy Now"}
+                onClick={() => selectsCarts(product)}
+                disabled={selected}
+                className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg">
+                {selected ? "Selected" : "Buy Now"}
             </button>
+
+
         </div>
     );
 };
